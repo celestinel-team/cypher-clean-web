@@ -5,28 +5,28 @@ const steps = [
     number: '01',
     icon: <FolderOpen size={28} className="text-cyan-400" />,
     title: 'Choose a Directory',
-    desc: 'Click "Choose Folder" and point Cypher Clean at any project root — your entire Coding folder, a single repo, wherever you want.',
+    desc: 'Click "Choose Folder" and point Cypher Clean at any project root - your entire Coding folder, a single repo, wherever you want.',
     detail: 'Works with any path on any drive. UNC paths and external drives supported.',
   },
   {
     number: '02',
     icon: <ScanSearch size={28} className="text-blue-400" />,
     title: 'Scan in Seconds',
-    desc: 'The scanner walks the directory tree looking for all 18 known folder types. Most scans complete in under 5 seconds even across hundreds of projects.',
-    detail: 'Multithreaded I/O — won\'t lock up your machine during scan.',
+    desc: 'The scanner walks the directory tree looking for all 17 known folder types. Most scans complete in around 10 seconds even across hundreds of projects.',
+    detail: 'Multithreaded I/O - won\'t lock up your machine during scan.',
   },
   {
     number: '03',
     icon: <ShieldCheck size={28} className="text-green-400" />,
     title: 'Review Safety Scores',
-    desc: 'Every folder gets a color-coded safety score. Green means untouched for months — safe to go. Yellow means modified recently. Red means hands-off.',
+    desc: 'Every folder gets a color-coded safety score. Green means untouched for months - safe to go. Yellow means modified recently. Red means hands-off.',
     detail: 'Filter by type, sort by size or date, bulk-select what you want.',
   },
   {
     number: '04',
     icon: <Trash2 size={28} className="text-red-400" />,
     title: 'Delete with Confidence',
-    desc: 'Hit Delete on your selected folders. A confirmation modal shows the exact total bytes about to be freed. Confirm once — done.',
+    desc: 'Hit Delete on your selected folders. A confirmation modal shows the exact total bytes about to be freed. Confirm once - done.',
     detail: 'Deletion is logged to history. You\'ll see exactly what was removed.',
   },
 ]
@@ -84,7 +84,7 @@ export default function HowItWorks() {
           Regenerating a deleted folder is always one terminal command away.{' '}
           <span className="text-slate-500">
             <code className="font-mono text-xs text-blue-400">npm install</code>,{' '}
-            <code className="font-mono text-xs text-blue-400">pip install -r requirements.txt</code> — your toolchain rebuilds it.
+            <code className="font-mono text-xs text-blue-400">pip install -r requirements.txt</code> - your toolchain rebuilds it.
           </span>
         </p>
       </div>

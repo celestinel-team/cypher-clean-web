@@ -1,7 +1,9 @@
 import { Download, ArrowRight } from 'lucide-react'
 import cl1 from '../assets/CL1.png'
+import { useDownloadModal } from '../context/DownloadModalContext'
 
 export default function Hero() {
+  const { openModal } = useDownloadModal()
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden noise-bg pt-36">
       {/* Background radials */}
@@ -15,6 +17,12 @@ export default function Hero() {
       <div className="absolute inset-0 section-grid-bg pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        {/* Eyebrow */}
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/20 bg-blue-500/5 text-blue-400 text-xs font-medium tracking-widest uppercase mb-5">
+          <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+          Built for developers
+        </div>
+
         {/* Headline */}
         <h1 className="text-5xl md:text-7xl font-black tracking-tight text-white leading-[1.05] mb-5">
           Reclaim Your{' '}
@@ -30,13 +38,14 @@ export default function Hero() {
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-          <a
-            href="#download"
+          <button
+            type="button"
+            onClick={openModal}
             className="btn-primary flex items-center gap-2.5 text-base px-8 py-4 rounded-xl shadow-xl shadow-blue-600/25"
           >
             <Download size={18} />
-            Download for Windows — Free
-          </a>
+            Download for Windows
+          </button>
           <a
             href="#preview"
             className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-sm font-medium group"
@@ -51,16 +60,9 @@ export default function Hero() {
           {/* Outer glow frame */}
           <div className="absolute -inset-1 bg-gradient-to-b from-blue-500/30 via-blue-500/10 to-transparent rounded-2xl blur-xl" />
           <div className="relative rounded-2xl overflow-hidden border border-blue-500/20 shadow-2xl shadow-black/60 float-anim">
-            {/* Window chrome */}
-            <div className="bg-[#0a1628] px-4 py-3 flex items-center gap-2 border-b border-white/5">
-              <div className="w-3 h-3 rounded-full bg-red-500/70" />
-              <div className="w-3 h-3 rounded-full bg-yellow-500/70" />
-              <div className="w-3 h-3 rounded-full bg-green-500/70" />
-              <span className="ml-3 text-xs text-slate-600 font-mono">CYPHER CLEAN — C:\Coding</span>
-            </div>
             <img
               src={cl1}
-              alt="Cypher Clean — main dashboard showing 4.36 GB found across 62 folders"
+              alt="Cypher Clean - main dashboard showing 4.36 GB found across 62 folders"
               className="w-full block"
             />
           </div>

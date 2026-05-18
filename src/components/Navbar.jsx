@@ -16,13 +16,17 @@ export default function Navbar() {
     { label: 'How It Works', href: '#how-it-works' },
     { label: 'Preview', href: '#preview' },
     { label: 'Pricing', href: '#pricing' },
+    { label: 'Reviews', href: '#testimonials' },
     { label: 'FAQ', href: '#faq' },
+    { label: 'Contact', href: '#contact' },
   ]
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'glass border-b border-blue-500/10 shadow-lg shadow-black/30' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${
+        scrolled
+          ? 'backdrop-blur-md bg-[#0d1b2e]/80 border-blue-500/10 shadow-lg shadow-black/30'
+          : 'bg-transparent border-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">

@@ -2,18 +2,20 @@ import { useState } from 'react'
 import cl1 from '../assets/CL1.png'
 import cl2 from '../assets/CL2.png'
 import cl3 from '../assets/CL3.png'
+import clPro1 from '../assets/CL_PRO1.png'
+import clPro2 from '../assets/CL_PRO2.png'
 
 const tabs = [
   {
     label: 'Dashboard',
-    desc: 'Main scan view — Storage Insights panel with total clearable space, folder count, largest folder, and a breakdown by tech stack.',
+    desc: 'Main scan view - Storage Insights panel with total clearable space, folder count, largest folder, and a breakdown by tech stack.',
     img: cl1,
     alt: 'Cypher Clean dashboard showing 4.36 GB clearable space across 62 folders',
     highlights: ['4.36 GB found in one scan', '62 cleanup candidates', 'Live safety scores on every folder'],
   },
   {
     label: 'Storage Breakdown',
-    desc: 'Visual bar chart of disk usage per category — instantly see that Node.js is eating 81% of your recoverable space.',
+    desc: 'Visual bar chart of disk usage per category - instantly see that Node.js is eating 81% of your recoverable space.',
     img: cl2,
     alt: 'Storage insights panel showing bar chart breakdown by folder type',
     highlights: ['Per-category breakdown', 'Proportional bar charts', 'Node.js, Python, Rust/Java, Web Cache and more'],
@@ -24,6 +26,22 @@ const tabs = [
     img: cl3,
     alt: 'Folder list showing project paths, sizes, and delete actions',
     highlights: ['Full path shown', 'One-click delete per folder', 'Safety % badge on every row'],
+  },
+  {
+    label: 'Pro Dashboard',
+    desc: 'Pro unlocks unlimited scans and all results - no 30-folder cap. The PRO badge appears in the title bar and the Analyze button is enabled on every folder row.',
+    img: clPro1,
+    alt: 'Cypher Clean Pro dashboard with unlimited scan results and Analyze button enabled',
+    highlights: ['Unlimited scans', 'All results - no cap', 'Analyze button unlocked on every folder'],
+    pro: true,
+  },
+  {
+    label: 'AI Analysis',
+    desc: 'AI Project Analysis modal - shows project metadata, auto-detected technology tags, and three AI-generated cards powered by GPT-4.1 via GitHub Models.',
+    img: clPro2,
+    alt: 'AI Project Analysis modal showing project metadata, tech tags, and GPT-4.1 generated summary',
+    highlights: ['Project metadata & tech tags', 'What the project does', 'How it works + main frameworks'],
+    pro: true,
   },
 ]
 
@@ -49,18 +67,25 @@ export default function Preview() {
         </div>
 
         {/* Tab switcher */}
-        <div className="flex items-center justify-center gap-2 mb-8">
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
           {tabs.map((t, i) => (
             <button
               key={i}
               onClick={() => setActive(i)}
-              className={`px-5 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+              className={`flex items-center gap-1.5 px-5 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                 active === i
-                  ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30'
+                  ? t.pro
+                    ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg shadow-purple-600/30'
+                    : 'bg-blue-600 text-white shadow-lg shadow-blue-600/30'
                   : 'text-slate-500 hover:text-slate-300 hover:bg-white/5'
               }`}
             >
               {t.label}
+              {t.pro && (
+                <span className={`text-[9px] font-bold tracking-widest px-1.5 py-0.5 rounded-full uppercase ${
+                  active === i ? 'bg-white/20 text-white' : 'bg-purple-500/20 text-purple-400'
+                }`}>Pro</span>
+              )}
             </button>
           ))}
         </div>
@@ -75,7 +100,7 @@ export default function Preview() {
               <div className="w-3 h-3 rounded-full bg-yellow-500/70" />
               <div className="w-3 h-3 rounded-full bg-green-500/70" />
               <div className="flex-1 flex justify-center">
-                <span className="text-xs text-slate-600 font-mono">CYPHER CLEAN — v1.0</span>
+                <span className="text-xs text-slate-600 font-mono">CYPHER CLEAN - v1.0</span>
               </div>
             </div>
             <img

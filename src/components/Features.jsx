@@ -7,7 +7,7 @@ const features = [
   {
     icon: <Scan size={22} className="text-cyan-400" />,
     title: 'Deep Project Scanning',
-    desc: 'Recursively scans any directory and identifies 18 types of generated/cache folders — from node_modules to .gradle — in seconds.',
+    desc: 'Recursively scans any directory and identifies 17 types of generated/cache folders - from node_modules to .gradle - in about 10 seconds.',
     tag: 'Core',
   },
   {
@@ -25,7 +25,7 @@ const features = [
   {
     icon: <BarChart2 size={22} className="text-purple-400" />,
     title: 'Storage Insights Panel',
-    desc: 'Visual breakdown of clearable space by category — Node.js, Python, Rust/Java, Framework, Web Cache — with a live bar chart.',
+    desc: 'Visual breakdown of clearable space by category - Node.js, Python, Rust/Java, Framework, Web Cache - with a live bar chart.',
     tag: 'Insights',
   },
   {
@@ -43,7 +43,7 @@ const features = [
   {
     icon: <Bell size={22} className="text-pink-400" />,
     title: 'Desktop Notifications',
-    desc: 'Get an alert when a scan finds more than 500 MB of clearable space — so you can act before your disk fills up.',
+    desc: 'Get an alert when a scan finds more than 500 MB of clearable space - so you can act before your disk fills up.',
     tag: 'Alerts',
   },
   {
@@ -55,14 +55,14 @@ const features = [
   {
     icon: <Cpu size={22} className="text-indigo-400" />,
     title: 'AI Project Analysis',
-    desc: 'Pro: reads README, package.json, pyproject.toml, pom.xml — detects your tech stack and generates a plain-English project summary powered by AI.',
+    desc: 'Pro: reads README, package.json, pyproject.toml, pom.xml - detects your tech stack and generates a plain-English summary powered by GPT-4.1 via GitHub Models. Runs in the cloud; your API key never leaves the backend.',
     tag: 'Pro',
     pro: true,
   },
   {
     icon: <Lock size={22} className="text-cyan-400" />,
-    title: '100% Local — Zero Telemetry',
-    desc: 'No telemetry, no accounts, no tracking. All scanning and deletion runs on-device. The optional AI analysis (Pro) uses a cloud model — nothing else ever leaves your machine.',
+    title: '100% Local - Zero Telemetry',
+    desc: 'No telemetry, no accounts, no tracking. All scanning and deletion runs on-device. The optional AI analysis (Pro) uses a cloud model - nothing else ever leaves your machine.',
     tag: 'Privacy',
   },
 ]
@@ -113,13 +113,13 @@ export default function Features() {
         {/* Folder types strip */}
         <div className="mt-14 glass rounded-2xl p-6 border border-blue-500/10">
           <p className="text-slate-500 text-xs tracking-widest uppercase font-medium mb-4">
-            18 folder types detected automatically
+            17 folder types detected automatically
           </p>
           <div className="flex flex-wrap gap-2">
             {[
               'node_modules', 'venv', '.venv', '.next', '.nuxt', '.svelte-kit',
               'target', '.gradle', '.vite', '.parcel-cache', '.turbo', '.dart_tool',
-              '.flutter', '.expo', 'build', 'out', '.cache', '__pycache__',
+              '.flutter', '.expo', 'build', 'out', '.cache',
             ].map(name => (
               <code
                 key={name}

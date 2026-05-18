@@ -45,7 +45,7 @@ export default function Stats() {
       <div className="relative max-w-5xl mx-auto px-6">
         <div className="glass rounded-2xl border border-blue-500/15 px-8 py-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
-            <StatCard value={18} suffix="+" label="Folder types detected" started={visible} delay={0} />
+            <StatCard value={17} suffix="+" label="Folder types detected" started={visible} delay={0} />
             <StatCard value={4} suffix=" GB+" label="Avg space recovered" started={visible} delay={150} />
             <StatCard value={0} suffix="" label="Telemetry collected" started={visible} delay={300} static display="Zero" />
             <StatCard value={10} suffix="s" label="Typical scan time" started={visible} delay={450} />

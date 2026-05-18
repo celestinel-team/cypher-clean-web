@@ -1,6 +1,8 @@
-import { Download, Monitor, Shield, Zap } from 'lucide-react'
+import { Download, Monitor, ShieldAlert } from 'lucide-react'
+import { useDownloadModal } from '../context/DownloadModalContext'
 
 export default function DownloadSection() {
+  const { openModal } = useDownloadModal()
   return (
     <section id="download" className="py-24 relative overflow-hidden">
       {/* Big glow */}
@@ -12,7 +14,7 @@ export default function DownloadSection() {
       <div className="relative max-w-4xl mx-auto px-6 text-center">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/5 text-cyan-400 text-xs font-medium tracking-widest uppercase mb-6">
           <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
-          Free Download — Windows
+          Free Download - Windows
         </div>
 
         <h2 className="text-4xl md:text-6xl font-black text-white tracking-tight mb-6 leading-tight">
@@ -22,29 +24,42 @@ export default function DownloadSection() {
         </h2>
 
         <p className="text-slate-500 text-lg max-w-lg mx-auto mb-10">
-          Download Cypher Clean for free. No account, no subscription, no cloud. Just point it at a folder and watch the space come back.
+          Download Cypher Clean for free. No account, no subscription. Just point it at a folder and watch the space come back.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-          <a
-            href="#"
+          <button
+            type="button"
+            onClick={openModal}
             className="btn-primary flex items-center gap-3 text-base px-10 py-4 rounded-xl shadow-2xl shadow-blue-600/30"
           >
             <Download size={20} />
-            Download for Windows — Free
-          </a>
+            Download for Windows - Free
+          </button>
           <div className="text-slate-600 text-sm flex items-center gap-1.5">
             <Monitor size={14} />
             Windows 10 / 11 · 64-bit
           </div>
         </div>
 
-        {/* Trust row */}
-        <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-slate-600">
-          <span className="flex items-center gap-2"><Shield size={14} className="text-green-400" /> No cloud sync</span>
-          <span className="flex items-center gap-2"><Zap size={14} className="text-yellow-400" /> No account needed</span>
-          <span className="flex items-center gap-2"><Download size={14} className="text-blue-400" /> ~12 MB installer</span>
-          <span className="flex items-center gap-2"><Shield size={14} className="text-cyan-400" /> Safety-scored deletions</span>
+        {/* Unsigned-installer notice */}
+        <div className="max-w-2xl mx-auto glass rounded-2xl border border-yellow-500/25 bg-yellow-500/5 p-6 text-left">
+          <div className="flex items-start gap-4">
+            <div className="w-10 h-10 rounded-lg bg-yellow-500/10 flex items-center justify-center shrink-0">
+              <ShieldAlert size={20} className="text-yellow-400" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-white font-semibold text-base mb-2">
+                Heads up: Windows may show a SmartScreen warning
+              </h3>
+              <p className="text-slate-400 text-sm leading-relaxed mb-3">
+                Cypher Clean is an indie project, and code-signing certificates are expensive - we haven't bought one yet. Because the installer isn't signed, Windows SmartScreen will pop up a blue warning saying <em className="text-slate-300">"Windows protected your PC."</em> Nothing is wrong with the file.
+              </p>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                To install: click <strong className="text-white">More info</strong>, then <strong className="text-white">Run anyway</strong>. That's it.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,8 +1,9 @@
 import { Check, X, Zap, Shield } from 'lucide-react'
 
 const freeFeatures = [
-  { text: 'All 18 folder types detected', included: true },
+  { text: 'All 17 folder types detected', included: true },
   { text: 'Delete-safety scoring (0–100%)', included: true },
+  { text: 'Up to 30 results per scan', included: true },
   { text: 'Bulk select & delete with confirmation', included: true },
   { text: 'Storage Insights panel + bar chart', included: true },
   { text: 'Filter by category, sort by size/date', included: true },
@@ -13,18 +14,18 @@ const freeFeatures = [
   { text: 'Lifetime stats (total freed)', included: true },
   { text: '3 scans per 6-hour window', included: true },
   { text: 'Unlimited scans', included: false },
+  { text: 'Full results (30+ folders)', included: false },
   { text: 'AI project analysis', included: false },
-  { text: 'Priority support', included: false },
 ]
 
 const proFeatures = [
   { text: 'Everything in Free', included: true },
-  { text: 'Unlimited scans — no cooldown', included: true },
+  { text: 'Unlimited scans - no cooldown', included: true },
+  { text: 'All results - no 30-folder cap', included: true },
   { text: 'AI project analysis', included: true },
-  { text: 'Detects tech stack from README / package.json', included: true },
-  { text: 'Generates project summary with AI', included: true },
-  { text: 'Priority support', included: true },
-  { text: 'Cancel anytime', included: true },
+  { text: 'Tech stack auto-detection from README / package.json', included: true },
+  { text: 'License cached locally - works offline for 24 h', included: true },
+  { text: 'Cancel anytime - reflected in-app within 60 s', included: true },
 ]
 
 function FeatureRow({ text, included }) {
@@ -55,7 +56,7 @@ export default function Pricing() {
             <span className="gradient-text">Unlock more inside.</span>
           </h2>
           <p className="text-slate-500 text-lg max-w-xl mx-auto">
-            One download. Pro is an in-app activation — no separate installer, no new account.
+            One download. Pro is an in-app activation - no separate installer, no new account.
           </p>
         </div>
 
@@ -108,11 +109,11 @@ export default function Pricing() {
                 <span className="text-cyan-400 font-semibold text-sm tracking-widest uppercase">Pro</span>
               </div>
               <div className="flex items-end gap-2 mt-3">
-                <span className="text-5xl font-black text-white">$9</span>
+                <span className="text-5xl font-black text-white">$5</span>
                 <span className="text-slate-400 pb-1.5">/ month</span>
               </div>
               <p className="text-slate-400 text-sm mt-2">
-                Unlimited scans + AI analysis. Cancel anytime. Activated inside the app — no reinstall.
+                Unlimited scans + AI analysis. Billed via Polar.sh. Activate with a license key inside the app - no reinstall.
               </p>
             </div>
 
@@ -125,10 +126,10 @@ export default function Pricing() {
                 href="#download"
                 className="btn-primary block w-full text-center py-3 rounded-xl text-sm glow-pulse"
               >
-                Get Pro — $9 / month
+                Get Pro - $5 / month
               </a>
               <p className="text-center text-xs text-slate-600 mt-2">
-                Activate inside the app · Cancel anytime
+                License key · Activate inside the app · Cancel anytime
               </p>
             </div>
           </div>
