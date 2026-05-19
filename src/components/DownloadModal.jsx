@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { ShieldAlert, Download as DownloadIcon, X } from 'lucide-react'
 
-const INSTALLER_URL = 'https://github.com/celestinel-team/cypher-clean-single-app/releases/latest/download/Cypher-Clean-Setup.exe'
+const INSTALLER_URL = 'https://github.com/celestinel-team/cypher-clean-releases/releases/download/v1.0.12/Cypher-Clean-Setup.exe'
 
 export default function DownloadModal({ open, onClose }) {
   useEffect(() => {

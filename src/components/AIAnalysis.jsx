@@ -48,7 +48,7 @@ export default function AIAnalysis() {
             <span className="gradient-text">Let AI explain it.</span>
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            One click on any project and Cypher Clean reads its config files, detects the stack, and writes a plain-English summary — so you know exactly what you're about to delete.
+            One click on any project and Cypher Clean reads its config files, detects the stack, and writes a plain-English summary - so you know exactly what you're about to delete.
           </p>
         </div>
 
