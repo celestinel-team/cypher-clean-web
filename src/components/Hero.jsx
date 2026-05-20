@@ -6,7 +6,7 @@ import ScannerTicker from './ScannerTicker'
 export default function Hero() {
   const { openModal } = useDownloadModal()
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden noise-bg pt-28 sm:pt-36">
+    <section className="relative md:min-h-screen flex flex-col items-center md:justify-center overflow-hidden noise-bg pt-28 sm:pt-36 pb-16">
       {/* Background radials */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-blue-600/8 rounded-full blur-3xl" />
@@ -45,7 +45,7 @@ export default function Hero() {
           <button
             type="button"
             onClick={openModal}
-            className="btn-primary w-full sm:w-auto flex items-center justify-center gap-2.5 text-base px-8 py-4 rounded-xl shadow-xl shadow-blue-600/25"
+            className="btn-primary flex items-center justify-center gap-2.5 text-base px-8 py-4 rounded-xl shadow-xl shadow-blue-600/25"
           >
             <Download size={18} />
             Download for Windows
