@@ -18,6 +18,11 @@ export default function DownloadModal({ open, onClose }) {
   if (!open) return null
 
   const startDownload = () => {
+    // Fire-and-forget download log. keepalive lets the request survive page
+    // navigation; .catch swallows failures so tracking can never break the
+    // actual download.
+    fetch('/api/track-download', { method: 'POST', keepalive: true }).catch(() => {})
+
     const a = document.createElement('a')
     a.href = INSTALLER_URL
     a.rel = 'noopener noreferrer'
