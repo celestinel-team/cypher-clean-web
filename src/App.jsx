@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import { DownloadModalProvider } from './context/DownloadModalContext'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -61,6 +62,7 @@ export default function App() {
         )}
         <Footer />
       </div>
+      <Analytics />
     </DownloadModalProvider>
   )
 }
