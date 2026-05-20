@@ -5,29 +5,29 @@ const steps = [
     number: '01',
     icon: <FolderOpen size={28} className="text-cyan-400" />,
     title: 'Choose a Directory',
-    desc: 'Click "Choose Folder" and point Cypher Clean at any project root - your entire Coding folder, a single repo, wherever you want.',
-    detail: 'Works with any path on any drive. UNC paths and external drives supported.',
+    desc: 'Point Cypher Clean at any project root - a single repo or your whole Coding folder.',
+    detail: 'Any path, any drive. UNC and external drives supported.',
   },
   {
     number: '02',
     icon: <ScanSearch size={28} className="text-blue-400" />,
     title: 'Scan in Seconds',
-    desc: 'The scanner walks the directory tree looking for all 17 known folder types. Most scans complete in around 10 seconds even across hundreds of projects.',
-    detail: 'Multithreaded I/O - won\'t lock up your machine during scan.',
+    desc: 'Finds all 17 folder types across hundreds of projects in ~10 seconds.',
+    detail: 'Multithreaded - won\'t lock up your machine.',
   },
   {
     number: '03',
     icon: <ShieldCheck size={28} className="text-green-400" />,
     title: 'Review Safety Scores',
-    desc: 'Every folder gets a color-coded safety score. Green means untouched for months - safe to go. Yellow means modified recently. Red means hands-off.',
-    detail: 'Filter by type, sort by size or date, bulk-select what you want.',
+    desc: 'Color-coded scores: green is safe, yellow modified recently, red hands-off.',
+    detail: 'Filter, sort, and bulk-select with ease.',
   },
   {
     number: '04',
     icon: <Trash2 size={28} className="text-red-400" />,
     title: 'Delete with Confidence',
-    desc: 'Hit Delete on your selected folders. A confirmation modal shows the exact total bytes about to be freed. Confirm once - done.',
-    detail: 'Deletion is logged to history. You\'ll see exactly what was removed.',
+    desc: 'Confirm the total bytes once. Done.',
+    detail: 'Every deletion is logged to history.',
   },
 ]
 
@@ -80,11 +80,11 @@ export default function HowItWorks() {
         </div>
 
         {/* Bottom note */}
-        <p className="text-center text-slate-600 text-sm mt-10">
+        <p className="text-center text-slate-600 text-sm mt-10 break-words">
           Regenerating a deleted folder is always one terminal command away.{' '}
           <span className="text-slate-500">
-            <code className="font-mono text-xs text-blue-400">npm install</code>,{' '}
-            <code className="font-mono text-xs text-blue-400">pip install -r requirements.txt</code> - your toolchain rebuilds it.
+            <code className="font-mono text-xs text-blue-400 break-all">npm install</code>,{' '}
+            <code className="font-mono text-xs text-blue-400 break-all">pip install -r requirements.txt</code> - your toolchain rebuilds it.
           </span>
         </p>
       </div>

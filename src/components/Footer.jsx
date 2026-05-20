@@ -3,7 +3,7 @@ const productLinks = [
   { label: 'How It Works', href: '#how-it-works' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'Download', href: '#download' },
-  { label: 'Changelog', href: '#changelog' },
+  // { label: 'Changelog', href: '#changelog' },
 ]
 
 const supportLinks = [

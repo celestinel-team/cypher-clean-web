@@ -1,11 +1,12 @@
 import { Download, ArrowRight } from 'lucide-react'
 import cl1 from '../assets/CL1.png'
 import { useDownloadModal } from '../context/DownloadModalContext'
+import ScannerTicker from './ScannerTicker'
 
 export default function Hero() {
   const { openModal } = useDownloadModal()
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden noise-bg pt-36">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden noise-bg pt-28 sm:pt-36">
       {/* Background radials */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-blue-600/8 rounded-full blur-3xl" />
@@ -16,7 +17,7 @@ export default function Hero() {
       {/* Grid bg */}
       <div className="absolute inset-0 section-grid-bg pointer-events-none" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center">
         {/* Eyebrow */}
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/20 bg-blue-500/5 text-blue-400 text-xs font-medium tracking-widest uppercase mb-5">
           <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
@@ -24,7 +25,7 @@ export default function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 className="text-5xl md:text-7xl font-black tracking-tight text-white leading-[1.05] mb-5">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight text-white leading-[1.05] mb-5">
           Reclaim Your{' '}
           <span className="gradient-text">Disk Space.</span>
           <br />
@@ -32,16 +33,19 @@ export default function Hero() {
         </h1>
 
         {/* Sub */}
-        <p className="max-w-xl mx-auto text-slate-400 text-lg leading-relaxed mb-8">
-          Scan your dev projects, score every junk folder for safety, and delete gigabytes in one click.
+        <p className="max-w-xl mx-auto text-slate-400 text-base sm:text-lg leading-relaxed mb-8">
+          Scan your PC for old dev projects, score every junk folder for safety, and delete gigabytes in one click.
         </p>
+
+        {/* Scanner ticker - what we detect */}
+        <ScannerTicker />
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
           <button
             type="button"
             onClick={openModal}
-            className="btn-primary flex items-center gap-2.5 text-base px-8 py-4 rounded-xl shadow-xl shadow-blue-600/25"
+            className="btn-primary w-full sm:w-auto flex items-center justify-center gap-2.5 text-base px-8 py-4 rounded-xl shadow-xl shadow-blue-600/25"
           >
             <Download size={18} />
             Download for Windows

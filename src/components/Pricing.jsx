@@ -97,16 +97,15 @@ export default function Pricing() {
             {/* Glow */}
             <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-br from-blue-500/30 to-cyan-500/10 blur opacity-50 -z-10" />
 
-            <div className="absolute top-6 right-6">
-              <span className="text-[10px] font-bold tracking-widest px-2.5 py-1 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white uppercase">
-                Most Popular
-              </span>
-            </div>
-
             <div>
-              <div className="flex items-center gap-2 mb-1">
-                <Zap size={18} className="text-cyan-400" />
-                <span className="text-cyan-400 font-semibold text-sm tracking-widest uppercase">Pro</span>
+              <div className="flex items-center justify-between gap-3 mb-1">
+                <div className="flex items-center gap-2">
+                  <Zap size={18} className="text-cyan-400" />
+                  <span className="text-cyan-400 font-semibold text-sm tracking-widest uppercase">Pro</span>
+                </div>
+                <span className="text-[10px] font-bold tracking-widest px-2.5 py-1 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white uppercase whitespace-nowrap">
+                  Most Popular
+                </span>
               </div>
               <div className="flex items-end gap-2 mt-3">
                 <span className="text-5xl font-black text-white">$5</span>

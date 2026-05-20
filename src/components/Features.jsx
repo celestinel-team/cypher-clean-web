@@ -7,7 +7,7 @@ const features = [
   {
     icon: <Scan size={22} className="text-cyan-400" />,
     title: 'Deep Project Scanning',
-    desc: 'Recursively scans any directory and identifies 17 types of generated/cache folders - from node_modules to .gradle - in about 10 seconds.',
+    desc: 'Recursively scans any directory and identifies 17+ types of generated/cache folders - from node_modules to .gradle - in about 10 seconds.',
     tag: 'Core',
   },
   {
@@ -16,12 +16,12 @@ const features = [
     desc: 'Every folder gets a 0–100% safety score based on last modification time. Color-coded green/yellow/red so you know exactly what\'s safe to delete.',
     tag: 'Smart',
   },
-  {
-    icon: <Trash2 size={22} className="text-blue-400" />,
-    title: 'Bulk Select & Delete',
-    desc: 'Select multiple folders at once. A confirmation modal shows the exact bytes you\'re about to free before anything is touched.',
-    tag: 'Core',
-  },
+  // {
+  //   icon: <Trash2 size={22} className="text-blue-400" />,
+  //   title: 'Bulk Select & Delete',
+  //   desc: 'Select multiple folders at once. A confirmation modal shows the exact bytes you\'re about to free before anything is touched.',
+  //   tag: 'Core',
+  // },
   {
     icon: <BarChart2 size={22} className="text-purple-400" />,
     title: 'Storage Insights Panel',
@@ -40,12 +40,12 @@ const features = [
     desc: 'Tracks the last 200 deletions with path, bytes freed, and timestamp. Never wonder what you cleaned up last week.',
     tag: 'History',
   },
-  {
-    icon: <Bell size={22} className="text-pink-400" />,
-    title: 'Desktop Notifications',
-    desc: 'Get an alert when a scan finds more than 500 MB of clearable space - so you can act before your disk fills up.',
-    tag: 'Alerts',
-  },
+  // {
+  //   icon: <Bell size={22} className="text-pink-400" />,
+  //   title: 'Desktop Notifications',
+  //   desc: 'Get an alert when a scan finds more than 500 MB of clearable space - so you can act before your disk fills up.',
+  //   tag: 'Alerts',
+  // },
   {
     icon: <FolderSearch size={22} className="text-teal-400" />,
     title: 'Explorer Right-Click',
@@ -55,14 +55,14 @@ const features = [
   {
     icon: <Cpu size={22} className="text-indigo-400" />,
     title: 'AI Project Analysis',
-    desc: 'Pro: reads README, package.json, pyproject.toml, pom.xml - detects your tech stack and generates a plain-English summary powered by GPT-4.1 via GitHub Models. Runs in the cloud; your API key never leaves the backend.',
+    desc: 'Pro: reads README, package.json, pyproject.toml, pom.xml - detects your tech stack and generates a plain-English summary powered by GPT-4.1 .',
     tag: 'Pro',
     pro: true,
   },
   {
     icon: <Lock size={22} className="text-cyan-400" />,
     title: '100% Local - Zero Telemetry',
-    desc: 'No telemetry, no accounts, no tracking. All scanning and deletion runs on-device. The optional AI analysis (Pro) uses a cloud model - nothing else ever leaves your machine.',
+    desc: 'No telemetry, no accounts, no tracking. All scanning and deletion runs on-device. The AI analysis (Pro) uses a cloud model - nothing else ever leaves your machine.',
     tag: 'Privacy',
   },
 ]

@@ -24,7 +24,7 @@ const bullets = [
   'Reads README, package.json, pyproject.toml, pom.xml & more',
   'Auto-detects tech stack and tags every project',
   'Three plain-English cards: purpose, architecture, stack',
-  'Only metadata is sent — never source code',
+  'Only metadata is sent - never source code',
 ]
 
 export default function AIAnalysis() {

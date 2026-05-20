@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { ShieldAlert, Download as DownloadIcon, X } from 'lucide-react'
+import { Download as DownloadIcon, X } from 'lucide-react'
 
 const INSTALLER_URL = 'https://github.com/celestinel-team/cypher-clean-releases/releases/latest/download/Cypher-Clean-Setup.exe'
 
@@ -53,11 +53,6 @@ export default function DownloadModal({ open, onClose }) {
         </button>
 
         <div className="p-7 sm:p-8">
-          {/* Icon */}
-          <div className="w-12 h-12 rounded-xl bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center mb-5">
-            <ShieldAlert size={22} className="text-yellow-400" />
-          </div>
-
           {/* Title */}
           <h2 id="download-modal-title" className="text-2xl font-black text-white tracking-tight mb-2">
             One quick heads up

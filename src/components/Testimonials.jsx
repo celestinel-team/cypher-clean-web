@@ -85,14 +85,9 @@ function TestimonialCard({ quote, name, role, company, initials, freed, pro }) {
       </p>
 
       <div className="flex items-center justify-between gap-4 pt-4 border-t border-blue-500/10">
-        <div className="flex items-center gap-3 min-w-0">
-          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white text-xs font-bold shrink-0">
-            {initials}
-          </div>
-          <div className="min-w-0">
-            <p className="text-white text-sm font-semibold truncate">{name}</p>
-            <p className="text-slate-500 text-xs truncate">{role} · {company}</p>
-          </div>
+        <div className="min-w-0">
+          <p className="text-white text-sm font-semibold truncate">{name}</p>
+          <p className="text-slate-500 text-xs truncate">{role} · {company}</p>
         </div>
         <div className="text-right shrink-0">
           <p className="text-cyan-400 text-sm font-mono font-bold">{freed}</p>

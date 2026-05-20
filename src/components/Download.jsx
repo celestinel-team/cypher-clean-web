@@ -1,4 +1,4 @@
-import { Download, Monitor, ShieldAlert } from 'lucide-react'
+import { Download, Monitor } from 'lucide-react'
 import { useDownloadModal } from '../context/DownloadModalContext'
 
 export default function DownloadSection() {
@@ -44,22 +44,15 @@ export default function DownloadSection() {
 
         {/* Unsigned-installer notice */}
         <div className="max-w-2xl mx-auto glass rounded-2xl border border-yellow-500/25 bg-yellow-500/5 p-6 text-left">
-          <div className="flex items-start gap-4">
-            <div className="w-10 h-10 rounded-lg bg-yellow-500/10 flex items-center justify-center shrink-0">
-              <ShieldAlert size={20} className="text-yellow-400" />
-            </div>
-            <div className="flex-1 min-w-0">
-              <h3 className="text-white font-semibold text-base mb-2">
-                Heads up: Windows may show a SmartScreen warning
-              </h3>
-              <p className="text-slate-400 text-sm leading-relaxed mb-3">
-                Cypher Clean is an indie project, and code-signing certificates are expensive - we haven't bought one yet. Because the installer isn't signed, Windows SmartScreen will pop up a blue warning saying <em className="text-slate-300">"Windows protected your PC."</em> Nothing is wrong with the file.
-              </p>
-              <p className="text-slate-400 text-sm leading-relaxed">
-                To install: click <strong className="text-white">More info</strong>, then <strong className="text-white">Run anyway</strong>. That's it.
-              </p>
-            </div>
-          </div>
+          <h3 className="text-white font-semibold text-base mb-2">
+            Heads up: Windows may show a SmartScreen warning
+          </h3>
+          <p className="text-slate-400 text-sm leading-relaxed mb-3">
+            Cypher Clean is an indie project, and code-signing certificates are expensive - we haven't bought one yet. Because the installer isn't signed, Windows SmartScreen will pop up a blue warning saying <em className="text-slate-300">"Windows protected your PC."</em> Nothing is wrong with the file.
+          </p>
+          <p className="text-slate-400 text-sm leading-relaxed">
+            To install: click <strong className="text-white">More info</strong>, then <strong className="text-white">Run anyway</strong>. That's it.
+          </p>
         </div>
       </div>
     </section>

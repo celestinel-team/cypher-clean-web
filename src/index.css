@@ -66,6 +66,27 @@ body {
   100% { background-position: 0% 50%; }
 }
 
+@keyframes ticker-slide {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.ticker-track {
+  animation: ticker-slide 40s linear infinite;
+}
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+.ticker-mask {
+  mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none; }
+}
+
 .glow-pulse { animation: pulse-glow 3s ease-in-out infinite; }
 .float-anim { animation: float 4s ease-in-out infinite; }
 .scan-line-anim { animation: scan-line 3s ease-in-out infinite; }
