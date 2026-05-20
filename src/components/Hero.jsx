@@ -17,7 +17,7 @@ export default function Hero() {
       {/* Grid bg */}
       <div className="absolute inset-0 section-grid-bg pointer-events-none" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 text-center">
         {/* Eyebrow */}
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/20 bg-blue-500/5 text-blue-400 text-xs font-medium tracking-widest uppercase mb-5">
           <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
